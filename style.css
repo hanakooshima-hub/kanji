@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+main {
+  width: 100%;
+  max-width: 500px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  padding: 60px 40px;
+  margin-bottom: 30px;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.side {
+  text-align: center;
+  width: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.side.hidden {
+  display: none;
+}
+
+.kanji {
+  font-size: 80px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.reading {
+  font-size: 24px;
+  color: #666;
+  font-style: italic;
+}
+
+.meaning {
+  font-size: 28px;
+  color: #667eea;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 14px;
+  color: #999;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+button {
+  padding: 12px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+#showBtn {
+  background: #667eea;
+  color: white;
+  flex: 1;
+}
+
+#showBtn:hover {
+  background: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+#nextBtn {
+  background: #764ba2;
+  color: white;
+  flex: 1;
+}
+
+#nextBtn:hover {
+  background: #63408a;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+}
