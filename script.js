@@ -13,6 +13,19 @@ async function loadFlashcards() {
   }
 }
 
+function shuffleFlashcards() {
+  if (flashcards.length < 2) return;
+
+  for (let i = flashcards.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [flashcards[i], flashcards[j]] = [flashcards[j], flashcards[i]];
+  }
+
+  currentIndex = 0;
+  displayCard();
+  document.getElementById('showBtn').textContent = 'Show answer';
+}
+
 // Display current card
 function displayCard() {
   if (flashcards.length === 0) return;
@@ -66,6 +79,9 @@ document.getElementById('nextBtn').addEventListener('click', function() {
   // Reset button text
   document.getElementById('showBtn').textContent = 'Show answer';
 });
+
+// Shuffle cards
+document.getElementById('shuffleBtn').addEventListener('click', shuffleFlashcards);
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', loadFlashcards);
