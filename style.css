@@ -4,38 +4,85 @@
   box-sizing: border-box;
 }
 
+:root {
+  --deep-green: #245B43;
+  --deep-green-dark: #183f32;
+  --traditional-red: #B83A3A;
+  --traditional-red-dark: #942f2f;
+  --warm-ivory: #F7F5EF;
+  --warm-ivory-soft: #f1efe7;
+  --ink: #24332d;
+  --muted: #66756f;
+  --shadow: rgba(15, 47, 38, 0.18);
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #245B43 0%, #1a4338 100%);
+  background: linear-gradient(135deg, var(--deep-green) 0%, var(--deep-green-dark) 100%);
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 28px 20px;
+  color: var(--ink);
 }
 
-main {
-  width: 100%;
-  max-width: 500px;
+.app-shell {
+  width: min(100%, 620px);
+}
+
+.title-block {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  color: rgba(247, 245, 239, 0.88);
+  font-size: 0.8rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.title-block h1 {
+  color: var(--warm-ivory);
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .card {
-  background: #F7F5EF;
-  border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-  padding: 60px 40px;
-  margin-bottom: 30px;
-  min-height: 300px;
+  background: var(--warm-ivory);
+  border: 2px solid rgba(36, 91, 67, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 20px 45px var(--shadow);
+  padding: 48px 30px 38px;
+  min-height: 320px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 1px solid rgba(36, 91, 67, 0.12);
+  border-radius: 14px;
+  pointer-events: none;
 }
 
 .side {
   text-align: center;
   width: 100%;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .side.hidden {
@@ -43,73 +90,108 @@ main {
 }
 
 .kanji {
-  font-size: 80px;
-  font-weight: bold;
-  color: #245B43;
-  margin-bottom: 20px;
+  font-size: clamp(4.5rem, 10vw, 6.2rem);
+  line-height: 1;
+  font-weight: 800;
+  color: var(--deep-green);
+  margin-bottom: 22px;
 }
 
 .reading {
-  font-size: 24px;
-  color: #5d7067;
+  font-size: clamp(1.1rem, 2.5vw, 1.7rem);
+  color: var(--muted);
   font-style: italic;
+  letter-spacing: 0.04em;
 }
 
 .meaning {
-  font-size: 28px;
-  color: #B83A3A;
-  margin-bottom: 20px;
-  font-weight: 500;
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  color: var(--traditional-red);
+  margin-bottom: 18px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .details {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  font-size: 14px;
-  color: #7a8a82;
+  gap: 22px;
+  flex-wrap: wrap;
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-top: 18px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
 }
 
 .controls {
   display: flex;
-  gap: 15px;
+  gap: 14px;
   justify-content: center;
+  margin-top: 22px;
+  flex-wrap: wrap;
 }
 
 button {
-  padding: 12px 30px;
-  font-size: 16px;
+  padding: 14px 22px;
+  font-size: 1rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 600;
+  transition: all 0.2s ease;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  min-width: 150px;
 }
 
 #showBtn {
-  background: #B83A3A;
-  color: #F7F5EF;
-  flex: 1;
+  background: var(--traditional-red);
+  color: var(--warm-ivory);
+  box-shadow: 0 10px 20px rgba(184, 58, 58, 0.2);
 }
 
 #showBtn:hover {
-  background: #9a2f2f;
+  background: var(--traditional-red-dark);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(184, 58, 58, 0.4);
 }
 
 #nextBtn {
-  background: #245B43;
-  color: #F7F5EF;
-  flex: 1;
+  background: var(--deep-green);
+  color: var(--warm-ivory);
+  box-shadow: 0 10px 20px rgba(36, 91, 67, 0.2);
 }
 
 #nextBtn:hover {
-  background: #1d473c;
+  background: var(--deep-green-dark);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(36, 91, 67, 0.4);
+}
+
+#shuffleBtn {
+  background: rgba(247, 245, 239, 0.1);
+  color: var(--warm-ivory);
+  border: 1px solid rgba(247, 245, 239, 0.35);
+}
+
+#shuffleBtn:hover {
+  background: rgba(247, 245, 239, 0.18);
+  transform: translateY(-2px);
 }
 
 button:active {
   transform: translateY(0);
+}
+
+@media (max-width: 560px) {
+  .controls {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .card {
+    padding: 40px 22px 30px;
+    min-height: 280px;
+  }
 }
