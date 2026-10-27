@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #245B43 0%, #1a4338 100%);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -20,7 +20,7 @@ main {
 }
 
 .card {
-  background: white;
+  background: #F7F5EF;
   border-radius: 12px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   padding: 60px 40px;
@@ -45,19 +45,19 @@ main {
 .kanji {
   font-size: 80px;
   font-weight: bold;
-  color: #333;
+  color: #245B43;
   margin-bottom: 20px;
 }
 
 .reading {
   font-size: 24px;
-  color: #666;
+  color: #5d7067;
   font-style: italic;
 }
 
 .meaning {
   font-size: 28px;
-  color: #667eea;
+  color: #B83A3A;
   margin-bottom: 20px;
   font-weight: 500;
 }
@@ -67,7 +67,7 @@ main {
   justify-content: center;
   gap: 30px;
   font-size: 14px;
-  color: #999;
+  color: #7a8a82;
 }
 
 .controls {
@@ -87,27 +87,27 @@ button {
 }
 
 #showBtn {
-  background: #667eea;
-  color: white;
+  background: #B83A3A;
+  color: #F7F5EF;
   flex: 1;
 }
 
 #showBtn:hover {
-  background: #5568d3;
+  background: #9a2f2f;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 5px 15px rgba(184, 58, 58, 0.4);
 }
 
 #nextBtn {
-  background: #764ba2;
-  color: white;
+  background: #245B43;
+  color: #F7F5EF;
   flex: 1;
 }
 
 #nextBtn:hover {
-  background: #63408a;
+  background: #1d473c;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
+  box-shadow: 0 5px 15px rgba(36, 91, 67, 0.4);
 }
 
 button:active {
