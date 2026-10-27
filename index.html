@@ -7,7 +7,12 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main>
+  <main class="app-shell">
+    <header class="title-block">
+      <p class="eyebrow">漢字カード</p>
+      <h1>Kanji Flashcards</h1>
+    </header>
+
     <div id="card" class="card">
       <div id="front" class="side"></div>
       <div id="back" class="side hidden"></div>
@@ -15,9 +20,11 @@
 
     <div class="controls">
       <button id="showBtn">Show answer</button>
-      <button id="nextBtn">Next</button>
+      <button id="nextBtn">Next card</button>
+      <button id="shuffleBtn" class="secondary">Shuffle</button>
     </div>
   </main>
+
   <script src="script.js"></script>
 </body>
 </html>
