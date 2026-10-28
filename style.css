@@ -1,182 +1,168 @@
-
-/* ========================================
-   CHRISTMAS THEME 🎄
-   ======================================== */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Luxury Christmas — Kanji Flashcards
+   Replace the entire contents of style.css with this file.
+   Existing HTML, flashcard data, and JavaScript controls remain unchanged. */
 
 :root {
-  --deep-green: #123c2d;
-  --deep-green-dark: #08291f;
-  --traditional-red: #b52e35;
-  --traditional-red-dark: #8e1f29;
-  --warm-ivory: #fffaf0;
-  --warm-ivory-soft: #f5eddb;
-  --gold: #d6b56d;
-  --gold-light: #f5df9b;
-  --ink: #24332d;
-  --muted: #72786e;
-  --shadow: rgba(0, 0, 0, 0.3);
+  color-scheme: light;
+  --pine: #12382b;
+  --pine-deep: #09251d;
+  --pine-soft: #245440;
+  --gold: #c8a96b;
+  --gold-light: #ead9ad;
+  --ivory: #fbf8f0;
+  --paper: #f4efe3;
+  --ink: #202d26;
+  --muted: #68736b;
+  --wine: #963d3d;
+  --line: rgba(153, 122, 62, 0.36);
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100%;
+  background: var(--pine-deep);
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background:
-    radial-gradient(ellipse at 50% 0%, rgba(46, 103, 72, 0.7), transparent 65%),
-    linear-gradient(135deg, var(--deep-green) 0%, var(--deep-green-dark) 100%);
   min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 28px 20px;
-  color: var(--ink);
-  position: relative;
+  justify-content: center;
+  padding: clamp(24px, 5vw, 64px) 20px;
   overflow-x: hidden;
+  color: var(--ink);
+  font-family: "Segoe UI", "Yu Gothic", "Hiragino Kaku Gothic ProN",
+    Meiryo, sans-serif;
+  background:
+    radial-gradient(ellipse at 50% 8%, rgba(65, 111, 78, 0.36), transparent 42%),
+    radial-gradient(circle at 12% 82%, rgba(200, 169, 107, 0.07), transparent 25%),
+    linear-gradient(145deg, #173f30 0%, var(--pine) 48%, var(--pine-deep) 100%);
+  position: relative;
 }
 
-/* Snowflakes in the background */
-body::before,
-body::after {
+/* Restrained, static flecks of winter light */
+body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
-}
-
-body::before {
+  opacity: 0.38;
   background-image:
-    radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,.8) 99%, transparent),
-    radial-gradient(2px 2px at 100px 150px, rgba(245,223,155,.8) 99%, transparent),
-    radial-gradient(3px 3px at 180px 80px, rgba(255,255,255,.65) 99%, transparent),
-    radial-gradient(2px 2px at 250px 200px, rgba(255,255,255,.7) 99%, transparent);
-  background-size: 300px 260px;
-  animation: snowfall 18s linear infinite;
+    radial-gradient(circle, rgba(234, 217, 173, 0.8) 0 1px, transparent 1.7px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.55) 0 1px, transparent 1.8px);
+  background-size: 137px 151px, 211px 193px;
+  background-position: 17px 23px, 83px 61px;
 }
 
-body::after {
-  background-image:
-    radial-gradient(2px 2px at 50px 100px, rgba(255,255,255,.5) 99%, transparent),
-    radial-gradient(3px 3px at 200px 180px, rgba(245,223,155,.6) 99%, transparent);
-  background-size: 350px 300px;
-  animation: snowfall 28s linear infinite;
-}
-
-@keyframes snowfall {
-  from {
-    background-position: 0 -300px;
-  }
-  to {
-    background-position: 100px 600px;
-  }
-}
-
-/* Main layout */
 .app-shell {
-  width: min(100%, 620px);
+  width: min(100%, 640px);
   position: relative;
   z-index: 1;
 }
 
 .title-block {
   text-align: center;
-  margin-bottom: 24px;
-  position: relative;
+  margin: 0 auto 30px;
 }
 
-/* Christmas ornaments above the title */
 .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
   color: var(--gold-light);
-  font-size: 0.8rem;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
+  font-size: 0.72rem;
   font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  content: "";
+  width: 25px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+
+.eyebrow::after {
+  transform: rotate(180deg);
 }
 
 .title-block h1 {
-  color: var(--warm-ivory);
-  font-size: clamp(2rem, 3vw, 2.75rem);
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-}
-
-.title-block h1::before {
-  content: "✦ ";
-  color: var(--gold-light);
-  font-size: 0.7em;
-  vertical-align: 12%;
+  color: var(--ivory);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 5vw, 3.15rem);
+  font-weight: 500;
+  letter-spacing: 0.045em;
+  line-height: 1.15;
+  text-wrap: balance;
 }
 
 .title-block h1::after {
-  content: " ✦";
-  color: var(--gold-light);
-  font-size: 0.7em;
-  vertical-align: 12%;
+  content: "";
+  display: block;
+  width: 58px;
+  height: 2px;
+  margin: 18px auto 0;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 
-/* Christmas card */
+/* The card is the visual focus */
 .card {
-  background: linear-gradient(
-    145deg,
-    var(--warm-ivory) 0%,
-    var(--warm-ivory-soft) 100%
-  );
-  border: 2px solid var(--gold);
-  border-radius: 20px;
-  box-shadow:
-    0 20px 45px var(--shadow),
-    0 0 25px rgba(214, 181, 109, 0.12);
-  padding: 48px 30px 38px;
-  min-height: 320px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+  padding: 54px 34px 46px;
   overflow: hidden;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  border: 1px solid var(--gold);
+  border-radius: 5px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.72), transparent 42%),
+    linear-gradient(145deg, var(--ivory), var(--paper));
+  box-shadow: var(--shadow), 0 0 0 5px rgba(200, 169, 107, 0.07);
+  transition: box-shadow 220ms ease, transform 220ms ease;
 }
 
-.card:hover {
-  box-shadow:
-    0 24px 50px rgba(0, 0, 0, 0.35),
-    0 0 30px rgba(214, 181, 109, 0.25);
-  transform: translateY(-3px);
-}
-
-/* Double decorative border */
 .card::before {
   content: "";
   position: absolute;
-  inset: 12px;
-  border: 1px solid rgba(166, 126, 52, 0.45);
-  border-radius: 13px;
+  inset: 11px;
+  border: 1px solid var(--line);
   pointer-events: none;
 }
 
 .card::after {
-  content: "❄";
+  content: "✦";
   position: absolute;
-  top: 18px;
-  right: 24px;
-  color: rgba(181, 46, 53, 0.45);
-  font-size: 1.5rem;
+  top: 21px;
+  right: 25px;
+  color: rgba(150, 61, 61, 0.68);
+  font-size: 1rem;
   pointer-events: none;
 }
 
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 30px 76px rgba(0, 0, 0, 0.28),
+    0 0 0 5px rgba(200, 169, 107, 0.1);
+}
+
 .side {
-  text-align: center;
-  width: 100%;
-  transition: opacity 0.25s ease, transform 0.25s ease;
   position: relative;
   z-index: 1;
+  width: 100%;
+  text-align: center;
+  transition: opacity 220ms ease, transform 220ms ease;
 }
 
 .side.hidden {
@@ -184,100 +170,112 @@ body::after {
 }
 
 .kanji {
-  font-size: clamp(4.5rem, 10vw, 6.2rem);
-  line-height: 1;
-  font-weight: 800;
-  color: var(--deep-green);
-  margin-bottom: 22px;
-  text-shadow: 0 2px 0 rgba(214, 181, 109, 0.25);
+  margin-bottom: 24px;
+  color: var(--pine);
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP",
+    "Times New Roman", serif;
+  font-size: clamp(5rem, 13vw, 7.25rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
 }
 
 .reading {
-  font-size: clamp(1.1rem, 2.5vw, 1.7rem);
   color: var(--muted);
-  font-style: italic;
-  letter-spacing: 0.04em;
+  font-family: Georgia, "Yu Mincho", serif;
+  font-size: clamp(1.15rem, 2.8vw, 1.65rem);
+  font-style: normal;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
 }
 
 .meaning {
-  font-size: clamp(1.7rem, 3vw, 2.5rem);
-  color: var(--traditional-red);
   margin-bottom: 18px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  color: var(--wine);
+  font-family: Georgia, "Yu Mincho", serif;
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0.025em;
 }
 
 .details {
   display: flex;
   justify-content: center;
-  gap: 22px;
   flex-wrap: wrap;
-  font-size: 0.92rem;
+  gap: 10px 22px;
+  margin-top: 24px;
   color: var(--muted);
-  margin-top: 18px;
+  font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.04em;
 }
 
-/* Christmas buttons */
+.details > * {
+  padding: 5px 0;
+}
+
+/* Clear, consistent controls */
 .controls {
   display: flex;
-  gap: 14px;
   justify-content: center;
-  margin-top: 24px;
   flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
 }
 
 button {
+  min-width: 145px;
   padding: 14px 22px;
-  font-size: 1rem;
   border: 1px solid transparent;
-  border-radius: 12px;
+  border-radius: 3px;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 650;
+  letter-spacing: 0.035em;
   cursor: pointer;
-  transition: all 0.2s ease;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  min-width: 150px;
-  font-family: inherit;
+  transition: background 180ms ease, border-color 180ms ease,
+    box-shadow 180ms ease, transform 180ms ease;
 }
 
 #showBtn {
-  background: linear-gradient(135deg, #c63a40, #a8202c);
-  color: #fffaf0;
-  box-shadow: 0 8px 20px rgba(184, 58, 58, 0.25);
+  color: var(--ivory);
+  background: var(--wine);
+  border-color: #b66e62;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
 }
 
 #showBtn:hover {
-  background: linear-gradient(135deg, #d54a4e, #94202a);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(184, 58, 58, 0.35);
+  background: #7f3032;
+  transform: translateY(-1px);
 }
 
 #nextBtn {
-  background: linear-gradient(135deg, #286b4b, #17452f);
-  color: #fffaf0;
-  border-color: rgba(214, 181, 109, 0.55);
-  box-shadow: 0 8px 20px rgba(36, 91, 67, 0.25);
+  color: var(--pine-deep);
+  background: var(--gold-light);
+  border-color: var(--gold);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
 }
 
 #nextBtn:hover {
-  background: linear-gradient(135deg, #347c59, #1c563a);
-  transform: translateY(-2px);
+  background: #f2e5c3;
+  transform: translateY(-1px);
 }
 
 #shuffleBtn {
-  background: rgba(255, 250, 240, 0.08);
-  color: var(--warm-ivory);
-  border: 1px solid rgba(245, 223, 155, 0.65);
+  color: var(--ivory);
+  background: rgba(255, 255, 255, 0.045);
+  border-color: rgba(234, 217, 173, 0.58);
 }
 
 #shuffleBtn:hover {
-  background: rgba(245, 223, 155, 0.15);
-  color: var(--gold-light);
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.11);
+  border-color: var(--gold-light);
+  transform: translateY(-1px);
 }
 
-button:active {
+button:active,
+.card:active {
   transform: translateY(0);
 }
 
@@ -287,36 +285,38 @@ button:focus-visible,
   outline-offset: 4px;
 }
 
-/* Mobile layout */
 @media (max-width: 560px) {
   body {
-    padding: 24px 16px;
+    padding: 28px 16px;
+  }
+
+  .title-block {
+    margin-bottom: 24px;
+  }
+
+  .title-block h1 {
+    letter-spacing: 0.015em;
+  }
+
+  .card {
+    min-height: 300px;
+    padding: 46px 22px 36px;
   }
 
   .controls {
     flex-direction: column;
+    gap: 10px;
   }
 
   button {
     width: 100%;
   }
-
-  .card {
-    padding: 40px 22px 30px;
-    min-height: 280px;
-  }
-
-  .title-block h1 {
-    letter-spacing: 0.04em;
-  }
 }
 
-/* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
-    animation: none !important;
     transition: none !important;
     scroll-behavior: auto !important;
   }
