@@ -19,5 +19,145 @@
     "meaning": "character",
     "strokes": 6,
     "level": "N4"
+  },
+  {
+    "kanji": "開",
+    "reading": "かい・ひらく",
+    "meaning": "open; start",
+    "strokes": 12,
+    "level": "N3"
+  },
+  {
+    "kanji": "発",
+    "reading": "はつ",
+    "meaning": "発する; development; launch",
+    "strokes": 9,
+    "level": "N3"
+  },
+  {
+    "kanji": "設",
+    "reading": "せつ",
+    "meaning": "establish; set up",
+    "strokes": 11,
+    "level": "N3"
+  },
+  {
+    "kanji": "計",
+    "reading": "けい",
+    "meaning": "measure; plan",
+    "strokes": 9,
+    "level": "N3"
+  },
+  {
+    "kanji": "構",
+    "reading": "こう",
+    "meaning": "structure; configuration",
+    "strokes": 14,
+    "level": "N2"
+  },
+  {
+    "kanji": "造",
+    "reading": "ぞう",
+    "meaning": "create; build",
+    "strokes": 10,
+    "level": "N3"
+  },
+  {
+    "kanji": "実",
+    "reading": "じつ・み",
+    "meaning": "actual; implement",
+    "strokes": 8,
+    "level": "N3"
+  },
+  {
+    "kanji": "装",
+    "reading": "そう",
+    "meaning": "install; equip",
+    "strokes": 12,
+    "level": "N2"
+  },
+  {
+    "kanji": "検",
+    "reading": "けん",
+    "meaning": "examine; inspect",
+    "strokes": 12,
+    "level": "N3"
+  },
+  {
+    "kanji": "証",
+    "reading": "しょう",
+    "meaning": "proof; verify",
+    "strokes": 12,
+    "level": "N2"
+  },
+  {
+    "kanji": "修",
+    "reading": "しゅう",
+    "meaning": "修正; repair",
+    "strokes": 10,
+    "level": "N3"
+  },
+  {
+    "kanji": "正",
+    "reading": "せい・ただしい",
+    "meaning": "correct; fix",
+    "strokes": 5,
+    "level": "N4"
+  },
+  {
+    "kanji": "変",
+    "reading": "へん・かえる",
+    "meaning": "change; variable",
+    "strokes": 9,
+    "level": "N3"
+  },
+  {
+    "kanji": "数",
+    "reading": "すう・かず",
+    "meaning": "number; count",
+    "strokes": 13,
+    "level": "N3"
+  },
+  {
+    "kanji": "処",
+    "reading": "しょ",
+    "meaning": "process; handle",
+    "strokes": 5,
+    "level": "N2"
+  },
+  {
+    "kanji": "理",
+    "reading": "り",
+    "meaning": "reason; logic",
+    "strokes": 11,
+    "level": "N3"
+  },
+  {
+    "kanji": "情",
+    "reading": "じょう",
+    "meaning": "information; emotion",
+    "strokes": 11,
+    "level": "N3"
+  },
+  {
+    "kanji": "報",
+    "reading": "ほう",
+    "meaning": "information; report",
+    "strokes": 12,
+    "level": "N3"
+  },
+  {
+    "kanji": "通",
+    "reading": "つう・とおる",
+    "meaning": "communication; pass",
+    "strokes": 10,
+    "level": "N3"
+  },
+  {
+    "kanji": "信",
+    "reading": "しん",
+    "meaning": "communication; trust",
+    "strokes": 9,
+    "level": "N3"
   }
 ]
