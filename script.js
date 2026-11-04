@@ -6,6 +6,11 @@ let currentIndex = 0;
 async function loadFlashcards() {
   try {
     const response = await fetch('flashcards.json');
+
+    if (!response.ok) {
+      throw new Error('Failed to load flashcards.json');
+    }
+
     flashcards = await response.json();
     displayCard();
   } catch (error) {
@@ -13,6 +18,7 @@ async function loadFlashcards() {
   }
 }
 
+// Shuffle flashcards
 function shuffleFlashcards() {
   if (flashcards.length < 2) return;
 
@@ -34,20 +40,22 @@ function displayCard() {
   const frontDiv = document.getElementById('front');
   const backDiv = document.getElementById('back');
 
-  // Front side - Kanji
+  // Front side - Kanji, reading, and romaji
   frontDiv.innerHTML = `
     <div class="kanji">${card.kanji}</div>
     <div class="reading">${card.reading}</div>
+    <div class="romaji">${card.romaji || ''}</div>
     <div class="details">
       <span>Strokes: ${card.strokes}</span>
       <span>Level: ${card.level}</span>
     </div>
   `;
 
-  // Back side - Meaning
+  // Back side - Meaning, reading, and romaji
   backDiv.innerHTML = `
     <div class="meaning">${card.meaning}</div>
     <div class="reading">${card.reading}</div>
+    <div class="romaji">${card.romaji || ''}</div>
     <div class="details">
       <span>Strokes: ${card.strokes}</span>
       <span>Level: ${card.level}</span>
@@ -67,20 +75,22 @@ document.getElementById('showBtn').addEventListener('click', function() {
   frontDiv.classList.toggle('hidden');
   backDiv.classList.toggle('hidden');
 
-  // Change button text
-  this.textContent = frontDiv.classList.contains('hidden') ? 'Show question' : 'Show answer';
+  this.textContent = frontDiv.classList.contains('hidden')
+    ? 'Show question'
+    : 'Show answer';
 });
 
 // Next card
 document.getElementById('nextBtn').addEventListener('click', function() {
+  if (flashcards.length === 0) return;
+
   currentIndex = (currentIndex + 1) % flashcards.length;
   displayCard();
 
-  // Reset button text
   document.getElementById('showBtn').textContent = 'Show answer';
 });
 
-// Shuffle cards
+// Shuffle button
 document.getElementById('shuffleBtn').addEventListener('click', shuffleFlashcards);
 
 // Initialize on page load
