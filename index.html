@@ -24,14 +24,51 @@
       <button id="nextBtn">Next card</button>
       <button id="shuffleBtn" class="secondary">Shuffle</button>
     </div>
+
+    <div id="reviewArea" class="review-area hidden">
+      <p class="review-question">Did you understand this kanji?</p>
+      <div class="review-buttons">
+        <button id="understoodBtn">わかった！</button>
+        <button id="practiceBtn">もう少し練習</button>
+      </div>
+    </div>
+
+    <div id="praiseArea" class="praise-area hidden">
+      <svg class="hanamaru" viewBox="0 0 200 200"
+           role="img" aria-label="Red hand-drawn flower stamp">
+        <g fill="none" stroke="#B83A3A"
+           stroke-width="7" stroke-linecap="round"
+           stroke-linejoin="round">
+          <path d="M100 24 C112 8 126 17 124 39
+                   C145 24 160 38 145 57
+                   C170 56 177 75 155 88
+                   C177 101 169 120 146 119
+                   C160 141 143 155 124 140
+                   C126 164 107 174 96 151
+                   C82 174 63 163 70 140
+                   C47 154 32 139 51 119
+                   C26 118 20 98 44 87
+                   C22 70 34 53 57 57
+                   C47 33 66 21 82 40
+                   C83 19 96 12 100 24 Z"/>
+          <circle cx="100" cy="96" r="57"/>
+          <path d="M65 98 Q100 80 135 98
+                   M68 111 Q100 127 132 110"/>
+        </g>
+        <text x="100" y="108" text-anchor="middle"
+              fill="#B83A3A" font-size="31"
+              font-weight="bold">花丸</text>
+      </svg>
+      <h2 id="praiseMessage">Well done!</h2>
+      <p>You're doing great! Keep learning!</p>
+    </div>
   </main>
 
-  <section style="max-width: 900px; margin: 40px auto; padding: 20px; text-align: center;">
+  <section class="poster-section">
     <h2>🎄 Christmas Hiragana 🎄</h2>
     <img
       src="./wide_flat_festive_illustrated_poster_style_image.png"
       alt="Christmas Hiragana Learning Chart"
-      style="width: 100%; height: auto; border-radius: 12px;"
     >
   </section>
 
