@@ -17,18 +17,16 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, var(--deep-green) 0%, var(--deep-green-dark) 100%);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(135deg, var(--deep-green), var(--deep-green-dark));
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 28px 20px;
   color: var(--ink);
 }
 
 .app-shell {
   width: min(100%, 620px);
+  margin: 0 auto;
 }
 
 .title-block {
@@ -37,10 +35,9 @@ body {
 }
 
 .eyebrow {
-  color: rgba(247, 245, 239, 0.88);
+  color: var(--warm-ivory);
   font-size: 0.8rem;
   letter-spacing: 0.22em;
-  text-transform: uppercase;
   margin-bottom: 10px;
   font-weight: 700;
 }
@@ -49,8 +46,6 @@ body {
   color: var(--warm-ivory);
   font-size: clamp(2rem, 3vw, 2.75rem);
   font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .card {
@@ -63,30 +58,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
   position: relative;
-  overflow: hidden;
-}
-
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 14px;
-  border: 1px solid rgba(36, 91, 67, 0.12);
-  border-radius: 14px;
-  pointer-events: none;
 }
 
 .side {
   text-align: center;
   width: 100%;
-  transition: opacity 0.25s ease, transform 0.25s ease;
-  position: relative;
-  z-index: 1;
 }
 
-.side.hidden {
-  display: none;
+.hidden {
+  display: none !important;
 }
 
 .kanji {
@@ -101,7 +82,12 @@ body {
   font-size: clamp(1.1rem, 2.5vw, 1.7rem);
   color: var(--muted);
   font-style: italic;
-  letter-spacing: 0.04em;
+}
+
+.romaji {
+  font-size: 1.1rem;
+  color: var(--deep-green);
+  margin-top: 8px;
 }
 
 .meaning {
@@ -109,7 +95,6 @@ body {
   color: var(--traditional-red);
   margin-bottom: 18px;
   font-weight: 700;
-  letter-spacing: 0.02em;
 }
 
 .details {
@@ -121,10 +106,10 @@ body {
   color: var(--muted);
   margin-top: 18px;
   font-weight: 600;
-  letter-spacing: 0.04em;
 }
 
-.controls {
+.controls,
+.review-buttons {
   display: flex;
   gap: 14px;
   justify-content: center;
@@ -138,51 +123,105 @@ button {
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  transition: all 0.2s ease;
   font-weight: 700;
-  letter-spacing: 0.02em;
   min-width: 150px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
 }
 
 #showBtn {
   background: var(--traditional-red);
   color: var(--warm-ivory);
-  box-shadow: 0 10px 20px rgba(184, 58, 58, 0.2);
 }
 
-#showBtn:hover {
-  background: var(--traditional-red-dark);
-  transform: translateY(-2px);
-}
-
-#nextBtn {
+#nextBtn,
+#understoodBtn {
   background: var(--deep-green);
   color: var(--warm-ivory);
-  box-shadow: 0 10px 20px rgba(36, 91, 67, 0.2);
 }
 
-#nextBtn:hover {
-  background: var(--deep-green-dark);
-  transform: translateY(-2px);
+#shuffleBtn,
+#practiceBtn {
+  background: var(--warm-ivory-soft);
+  color: var(--deep-green);
 }
 
-#shuffleBtn {
-  background: rgba(247, 245, 239, 0.1);
+.review-area,
+.praise-area {
+  margin-top: 24px;
+  text-align: center;
+  background: var(--warm-ivory);
+  padding: 22px;
+  border-radius: 18px;
+}
+
+.review-question {
+  color: var(--deep-green);
+  font-weight: 700;
+}
+
+.praise-area {
+  border: 3px solid var(--traditional-red);
+  animation: popIn 0.45s ease;
+}
+
+.hanamaru {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 10px;
+  display: block;
+  transform: rotate(-8deg);
+}
+
+.praise-area h2 {
+  color: var(--traditional-red);
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.praise-area p {
+  color: var(--deep-green);
+  font-weight: 600;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.5) rotate(-12deg);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.poster-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
   color: var(--warm-ivory);
-  border: 1px solid rgba(247, 245, 239, 0.35);
 }
 
-#shuffleBtn:hover {
-  background: rgba(247, 245, 239, 0.18);
-  transform: translateY(-2px);
+.poster-section h2 {
+  margin-bottom: 16px;
 }
 
-button:active {
-  transform: translateY(0);
+.poster-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
 }
 
 @media (max-width: 560px) {
-  .controls {
+  .controls,
+  .review-buttons {
     flex-direction: column;
   }
 
