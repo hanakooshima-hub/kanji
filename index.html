@@ -1,9 +1,7 @@
-
-<!doctype html>
-<html lang="en">
+<html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kanji Flashcards</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -14,43 +12,39 @@
       <h1>Kanji Flashcards</h1>
     </header>
 
-    <div id="card" class="card">
+    <div id="card" class="card" aria-live="polite">
       <div id="front" class="side"></div>
-      <div id="back" class="side hidden"></div>
+      <div id="back" class="side hidden" aria-hidden="true"></div>
     </div>
 
     <div class="controls">
-      <button id="showBtn">Show answer</button>
-      <button id="nextBtn">Next card</button>
-      <button id="shuffleBtn" class="secondary">Shuffle</button>
+      <button type="button" id="showBtn">Show answer</button>
+      <button type="button" id="nextBtn">Next card</button>
+      <button type="button" id="shuffleBtn" class="secondary">Shuffle</button>
     </div>
 
-    <div id="reviewArea" class="review-area hidden">
-      <p class="review-question">
-        Did you understand this kanji?
-      </p>
+    <div id="reviewArea" class="review-area hidden" aria-hidden="true">
+      <p class="review-question">Did you understand this kanji?</p>
       <div class="review-buttons">
-        <button id="understoodBtn">わかった！</button>
-        <button id="practiceBtn">もう少し練習</button>
+        <button type="button" id="understoodBtn">わかった！</button>
+        <button type="button" id="practiceBtn">もう少し練習</button>
       </div>
     </div>
   </main>
 
   <!-- Celebration popup -->
-  <div id="praiseArea" class="praise-area hidden">
-    <button id="closePraiseBtn" class="close-praise">
-      ×
-    </button>
-
+  <aside id="praiseArea" class="praise-area hidden" role="dialog" aria-modal="true" aria-labelledby="praiseMessage" aria-hidden="true">
+    <button type="button" id="closePraiseBtn" class="close-praise" aria-label="閉じる">&times;</button>
     <h2 id="praiseMessage">Well done!</h2>
     <p>You're doing great! Keep learning!</p>
-  </div>
+  </aside>
 
   <section class="poster-section">
     <h2>🎄 Christmas Hiragana 🎄</h2>
-    <img
-      src="./wide_flat_festive_illustrated_poster_style_image.png"
+    <img 
+      src="./wide_flat_festive_illustrated_poster_style_image.png" 
       alt="Christmas Hiragana Learning Chart"
+      loading="lazy"
     >
   </section>
 
