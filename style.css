@@ -263,3 +263,33 @@ button:hover {
     transform: scale(1) rotate(0);
   }
 }
+
+/* Hanamaru success image */
+.hanamaru-image {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  margin: 0 auto 20px;
+  animation: hanamaruPop 0.8s ease-out;
+}
+
+@keyframes hanamaruPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-15deg);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.12) rotate(5deg);
+  }
+
+  80% {
+    transform: scale(0.95) rotate(-2deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
