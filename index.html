@@ -2,10 +2,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kanji Flashcards</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="app-shell">
@@ -26,27 +26,40 @@
     </div>
 
     <div id="reviewArea" class="review-area hidden">
-      <p class="review-question">Did you understand this kanji?</p>
+      <p class="review-question">
+        Did you understand this kanji?
+      </p>
       <div class="review-buttons">
         <button id="understoodBtn">わかった！</button>
         <button id="practiceBtn">もう少し練習</button>
       </div>
     </div>
-<div id="praiseArea" class="praise-area hidden">
-  <img
-    src="./hanamaru-success.png"
-    alt="よくできました！ Excellent work!"
-    class="hanamaru-image"
-  >
-  <h2 id="praiseMessage">Well done!</h2>
-  <p>You're doing great! Keep learning!</p>
-</div>
   </main>
 
-  <!-- Christmas Hiragana Poster -->
+  <!-- Celebration popup -->
+  <div id="praiseArea" class="praise-area hidden">
+    <button id="closePraiseBtn" class="close-praise">
+      ×
+    </button>
+
+    <img
+      src="./hanamaru-success.png"
+      alt="Hanamaru success stamp"
+      class="hanamaru-image"
+    >
+
+    <img
+      src="./celebration-popup.png"
+      alt="Celebration"
+      class="celebration-image"
+    >
+
+    <h2 id="praiseMessage">Well done!</h2>
+    <p>You're doing great! Keep learning!</p>
+  </div>
+
   <section class="poster-section">
     <h2>🎄 Christmas Hiragana 🎄</h2>
-
     <img
       src="./wide_flat_festive_illustrated_poster_style_image.png"
       alt="Christmas Hiragana Learning Chart"
