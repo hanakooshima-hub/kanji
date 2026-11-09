@@ -1,3 +1,5 @@
+
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
@@ -32,21 +34,25 @@
     </div>
   </main>
 
-  <!-- Celebration popup -->
-  <aside id="praiseArea" class="praise-area hidden" role="dialog" aria-modal="true" aria-labelledby="praiseMessage" aria-hidden="true">
-    <button type="button" id="closePraiseBtn" class="close-praise" aria-label="閉じる">&times;</button>
+  <!-- Celebration message -->
+  <aside
+    id="praiseArea"
+    class="praise-area hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="praiseMessage"
+    aria-hidden="true"
+  >
+    <button
+      type="button"
+      id="closePraiseBtn"
+      class="close-praise"
+      aria-label="Close"
+    >&times;</button>
+
     <h2 id="praiseMessage">Well done!</h2>
     <p>You're doing great! Keep learning!</p>
   </aside>
-
-  <section class="poster-section">
-    <h2>🎄 Christmas Hiragana 🎄</h2>
-    <img 
-      src="./wide_flat_festive_illustrated_poster_style_image.png" 
-      alt="Christmas Hiragana Learning Chart"
-      loading="lazy"
-    >
-  </section>
 
   <script src="script.js"></script>
 </body>
