@@ -45,14 +45,14 @@
     "meaning": "celebrate"
   },
   {
-    "kanji": "本番反映"
+    "kanji": "本番反映",
     "katakana": "デプロイ",
     "reading": "ほんばんはんえい",
     "romaji": "honban han'ei",
     "meaning": "Deploy / Release to production"
   },
   {
-    "kanji": "-"
+    "kanji": "-",
     "katakana": "リポジトリ",
     "reading": "りぽじとり",
     "romaji": "ripojitori",
@@ -62,21 +62,21 @@
     "kanji": "統合",
     "katakana": "マージ",
     "reading": "とうごう",
-    "romaji": "tougou",
+    "romaji": "tougō",
     "meaning": "Merge"
   },
   {
     "kanji": "仕様",
-    "reading": "しよう",
     "katakana": "シヨウ",
+    "reading": "しよう",
     "romaji": "shiyou",
     "meaning": "Specs / Specification"
   },
   {
-    "kanji": "バグ修正",
-    "reading": "ばぐしゅうせい",
-    "katakana": "バグシュウセイ",
-    "romaji": "kaishuu",
-    "meaning": "Bug fix"
+    "kanji": "バグ修正・改修",
+    "katakana": "バグフィックス",
+    "reading": "ばぐしゅうせい・かいしゅう",
+    "romaji": "bagu shuusei / kaishuu",
+    "meaning": "Bug fix / Improvement"
   }
 ]
