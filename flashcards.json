@@ -43,5 +43,35 @@
     "reading": "いわう",
     "romaji": "iwau",
     "meaning": "celebrate"
+  },
+  {
+    "kanji": "デプロイ",
+    "reading": "ほんばんはんえい",
+    "romaji": "honban han'ei",
+    "meaning": "Deploy / Release to production"
+  },
+  {
+    "kanji": "リポジトリ",
+    "reading": "りぽじとり",
+    "romaji": "ripジtori",
+    "meaning": "Repository"
+  },
+  {
+    "kanji": "マージ",
+    "reading": "とうごう",
+    "romaji": "tougou",
+    "meaning": "Merge"
+  },
+  {
+    "kanji": "仕様",
+    "reading": "しよう",
+    "romaji": "shiyou",
+    "meaning": "Specs / Specification"
+  },
+  {
+    "kanji": "バグ修正",
+    "reading": "かいしゅう",
+    "romaji": "kaishuu",
+    "meaning": "Bug fix"
   }
 ]
