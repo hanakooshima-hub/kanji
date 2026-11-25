@@ -1,15 +1,16 @@
-
 [
   {
     "kanji": "愛",
+    "katakana": "アイ",
     "reading": "あい",
     "romaji": "ai",
-    "meaning": "love",
+    "meaning": "Love",
     "strokes": 13,
     "level": "N3"
   },
   {
     "kanji": "漢",
+    "katakana": "カン",
     "reading": "かん",
     "romaji": "kan",
     "meaning": "Sino-, Han (dynasty)",
@@ -18,183 +19,137 @@
   },
   {
     "kanji": "字",
+    "katakana": "ジ",
     "reading": "じ",
     "romaji": "ji",
-    "meaning": "character",
+    "meaning": "Character",
     "strokes": 6,
     "level": "N4"
   },
   {
     "kanji": "水",
+    "katakana": "ミズ",
     "reading": "みず",
     "romaji": "mizu",
-    "meaning": "water",
+    "meaning": "Water",
     "strokes": 4,
     "level": "N5"
   },
   {
     "kanji": "蝋燭",
+    "katakana": "ロウソク",
     "reading": "ろうそく",
-    "romaji": "rousoku",
-    "meaning": "candle"
+    "romaji": "rōsoku",
+    "meaning": "Candle",
+    "strokes": 42,
+    "level": "N/A"
   },
   {
     "kanji": "祝",
+    "katakana": "イワウ",
     "reading": "いわう",
     "romaji": "iwau",
-    "meaning": "celebrate"
+    "meaning": "To celebrate",
+    "strokes": 9,
+    "level": "N3"
   },
   {
     "kanji": "本番反映",
     "katakana": "デプロイ",
     "reading": "ほんばんはんえい",
     "romaji": "honban han'ei",
-    "meaning": "Deploy / Release to production"
+    "meaning": "Deploy / Release to production",
+    "strokes": 33,
+    "level": "N/A"
   },
   {
-    "kanji": "-",
+    "kanji": "リポジトリ",
     "katakana": "リポジトリ",
     "reading": "りぽじとり",
     "romaji": "ripojitori",
-    "meaning": "Repository"
+    "meaning": "Repository",
+    "strokes": 0,
+    "level": "N/A"
   },
   {
     "kanji": "統合",
     "katakana": "マージ",
     "reading": "とうごう",
-    "romaji": "tougō",
-    "meaning": "Merge"
+    "romaji": "tōgō",
+    "meaning": "Merge",
+    "strokes": 22,
+    "level": "N/A"
   },
   {
     "kanji": "仕様",
     "katakana": "シヨウ",
     "reading": "しよう",
-    "romaji": "shiyou",
-    "meaning": "Specs / Specification"
+    "romaji": "shiyō",
+    "meaning": "Specs / Specification",
+    "strokes": 13,
+    "level": "N/A"
   },
   {
     "kanji": "バグ修正・改修",
     "katakana": "バグフィックス",
     "reading": "ばぐしゅうせい・かいしゅう",
-    "romaji": "bagu shuusei / kaishuu",
-    "meaning": "Bug fix / Improvement"
+    "romaji": "bagu shūsei / kaishū",
+    "meaning": "Bug fix / Improvement",
+    "strokes": 34,
+    "level": "N/A"
   },
-    {
+  {
     "kanji": "汎化性能",
     "katakana": "ハンカセイノウ",
     "reading": "はんかせいのう",
-    "romaji": "Hankaseino",
-    "meaning": "Generalization"
-    },
+    "romaji": "hankaseinō",
+    "meaning": "Generalization performance",
+    "strokes": 30,
+    "level": "N/A"
+  },
   {
     "kanji": "注意",
     "katakana": "チュウイ",
     "reading": "ちゅうい",
-    "romaji": "Chui",
-    "meaning": "caution"
+    "romaji": "chūi",
+    "meaning": "Caution / Attention",
+    "strokes": 10,
+    "level": "N3"
   },
   {
     "kanji": "完了",
     "katakana": "カンリョウ",
     "reading": "かんりょう",
-    "romaji": "Kanryo",
-    "meaning": "Done"
+    "romaji": "kanryō",
+    "meaning": "Completion / Done",
+    "strokes": 7,
+    "level": "N3"
   },
   {
-    "kanji": "水",
-    "reading": "みず",
-    "romaji": "mizu",
-    "meaning": "water",
-    "strokes": 4,
-    "level": "N5"
-  },
-  {
-    "kanji": "蝋燭",
-    "reading": "ろうそく",
-    "romaji": "rousoku",
-    "meaning": "candle"
-  },
-  {
-    "kanji": "祝",
-    "reading": "いわう",
-    "romaji": "iwau",
-    "meaning": "celebrate"
-  },
-  {
-    "kanji": "本番反映",
-    "katakana": "デプロイ",
-    "reading": "ほんばんはんえい",
-    "romaji": "honban han'ei",
-    "meaning": "Deploy / Release to production"
-  },
-  {
-    "kanji": "-",
-    "katakana": "リポジトリ",
-    "reading": "りぽじとり",
-    "romaji": "ripojitori",
-    "meaning": "Repository"
-  },
-  {
-    "kanji": "統合",
-    "katakana": "マージ",
-    "reading": "とうごう",
-    "romaji": "tougō",
-    "meaning": "Merge"
-  },
-  {
-    "kanji": "仕様",
-    "katakana": "シヨウ",
-    "reading": "しよう",
-    "romaji": "shiyou",
-    "meaning": "Specs / Specification"
-  },
-  {
-    "kanji": "バグ修正・改修",
-    "katakana": "バグフィックス",
-    "reading": "ばぐしゅうせい・かいしゅう",
-    "romaji": "bagu shuusei / kaishuu",
-    "meaning": "Bug fix / Improvement"
-  },
-    {
-    "kanji": "汎化性能",
-    "katakana": "ハンカセイノウ",
-    "reading": "はんかせいのう",
-    "romaji": "Hankaseino",
-    "meaning": "Generalization"
-    },
-  {
-    "kanji": "注意",
-    "katakana": "チュウイ",
-    "reading": "ちゅうい",
-    "romaji": "Chui",
-    "meaning": "caution"
-  },
-  {
-    "kanji": "完了",
-    "katakana": "カンリョウ",
-    "reading": "かんりょう",
-    "romaji": "Kanryo",
-    "meaning": "Done"
-  },
-    {
     "kanji": "喜び",
     "katakana": "ヨロコビ",
     "reading": "よろこび",
-    "romaji": "Yorokobi",
-    "meaning": "Joy"
+    "romaji": "yorokobi",
+    "meaning": "Joy",
+    "strokes": 12,
+    "level": "N3"
   },
-   {
+  {
     "kanji": "希望",
-    "katakana": "きぼう",
-    "reading": "キボウ",
-    "romaji": "Kibou",
-    "meaning": "Hope"
-   },
-   {
+    "katakana": "キボウ",
+    "reading": "きぼう",
+    "romaji": "kibō",
+    "meaning": "Hope",
+    "strokes": 16,
+    "level": "N3"
+  },
+  {
     "kanji": "平和",
-    "katakana": "へいわ",
-    "reading": "ヘイワ",
-    "romaji": "Heiwa",
-    "meaning": "Peace"
-   }
+    "katakana": "ヘイワ",
+    "reading": "へいわ",
+    "romaji": "heiwa",
+    "meaning": "Peace",
+    "strokes": 13,
+    "level": "N3"
+  }
 ]
