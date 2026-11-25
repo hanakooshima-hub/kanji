@@ -113,5 +113,108 @@
     "reading": "キボウ",
     "romaji": "Kibou",
     "meaning": "Hope"
-  }
+   },
+   {
+    "kanji": "平和",
+    "katakana": "へいわ",
+    "reading": "ヘイワ",
+    "romaji": "Hiwa    "level": "N4"
+  },
+  {
+    "kanji": "水",
+    "reading": "みず",
+    "romaji": "mizu",
+    "meaning": "water",
+    "strokes": 4,
+    "level": "N5"
+  },
+  {
+    "kanji": "蝋燭",
+    "reading": "ろうそく",
+    "romaji": "rousoku",
+    "meaning": "candle"
+  },
+  {
+    "kanji": "祝",
+    "reading": "いわう",
+    "romaji": "iwau",
+    "meaning": "celebrate"
+  },
+  {
+    "kanji": "本番反映",
+    "katakana": "デプロイ",
+    "reading": "ほんばんはんえい",
+    "romaji": "honban han'ei",
+    "meaning": "Deploy / Release to production"
+  },
+  {
+    "kanji": "-",
+    "katakana": "リポジトリ",
+    "reading": "りぽじとり",
+    "romaji": "ripojitori",
+    "meaning": "Repository"
+  },
+  {
+    "kanji": "統合",
+    "katakana": "マージ",
+    "reading": "とうごう",
+    "romaji": "tougō",
+    "meaning": "Merge"
+  },
+  {
+    "kanji": "仕様",
+    "katakana": "シヨウ",
+    "reading": "しよう",
+    "romaji": "shiyou",
+    "meaning": "Specs / Specification"
+  },
+  {
+    "kanji": "バグ修正・改修",
+    "katakana": "バグフィックス",
+    "reading": "ばぐしゅうせい・かいしゅう",
+    "romaji": "bagu shuusei / kaishuu",
+    "meaning": "Bug fix / Improvement"
+  },
+    {
+    "kanji": "汎化性能",
+    "katakana": "ハンカセイノウ",
+    "reading": "はんかせいのう",
+    "romaji": "Hankaseino",
+    "meaning": "Generalization"
+    },
+  {
+    "kanji": "注意",
+    "katakana": "チュウイ",
+    "reading": "ちゅうい",
+    "romaji": "Chui",
+    "meaning": "caution"
+  },
+  {
+    "kanji": "完了",
+    "katakana": "カンリョウ",
+    "reading": "かんりょう",
+    "romaji": "Kanryo",
+    "meaning": "Done"
+  },
+    {
+    "kanji": "喜び",
+    "katakana": "ヨロコビ",
+    "reading": "よろこび",
+    "romaji": "Yorokobi",
+    "meaning": "Joy"
+  },
+   {
+    "kanji": "希望",
+    "katakana": "きぼう",
+    "reading": "キボウ",
+    "romaji": "Kibou",
+    "meaning": "Hope"
+   },
+   {
+    "kanji": "平和",
+    "katakana": "へいわ",
+    "reading": "ヘイワ",
+    "romaji": "Heiwa",
+    "meaning": "Peace"
+   }
 ]
