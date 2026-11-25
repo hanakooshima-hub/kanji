@@ -124,15 +124,39 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Safely display text from the JSON file
+  function escapeCardText(value) {
+    return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;"
+    })[char]);
+  }
+
+  // Render the front or back of a flashcard
   function renderCardSide(content) {
+    // Question side: Kanji + Katakana
+    if (!content.isBack) {
+      const main = escapeCardText(content.main || "");
+      const katakana = escapeCardText(content.katakana || "");
+
+      return `
+        ${main ? `<div class="kanji">${main}</div>` : ""}
+        ${katakana ? `<div class="katakana">${katakana}</div>` : ""}
+      `;
+    }
+
+    // Answer side: English meaning + Hiragana + Romaji
     return `
-      <div class="${content.isBack ? "meaning" : "kanji"}">${content.main}</div>
-      <div class="reading">${content.reading || ""}</div>
-      ${content.romaji ? `<div class="romaji">${content.romaji}</div>` : ""}
-      <div class="details">
-        ${content.strokes ? `<span>Strokes: ${content.strokes}</span>` : ""}
-        ${content.level ? `<span>Level: ${content.level}</span>` : ""}
-      </div>
+      <div class="meaning">${escapeCardText(content.main || "")}</div>
+      ${content.reading
+        ? `<div class="reading">${escapeCardText(content.reading)}</div>`
+        : ""}
+      ${content.romaji
+        ? `<div class="romaji">${escapeCardText(content.romaji)}</div>`
+        : ""}
     `;
   }
 
@@ -153,26 +177,34 @@ document.addEventListener("DOMContentLoaded", () => {
     setElementVisibility(praiseArea, false);
   }
 
+  // Display the current flashcard
   function displayCard() {
     if (!flashcards.length) return;
 
     const card = flashcards[currentIndex];
 
+    // Accept different katakana field names
+    const katakana =
+      card.katakana || card.kata || card.kana || "";
+
+    // Accept kanji field
+    const kanji =
+      card.kanji && card.kanji !== "-"
+        ? card.kanji
+        : "";
+
+    // Question: Kanji + Katakana only
     frontEl.innerHTML = renderCardSide({
-      main: card.kanji,
-      reading: card.reading,
-      romaji: card.romaji,
-      strokes: card.strokes,
-      level: card.level,
+      main: kanji,
+      katakana: katakana,
       isBack: false
     });
 
+    // Answer: English + Hiragana + Romaji only
     backEl.innerHTML = renderCardSide({
-      main: card.meaning,
-      reading: card.reading,
-      romaji: card.romaji,
-      strokes: card.strokes,
-      level: card.level,
+      main: card.meaning || "",
+      reading: card.reading || card.hiragana || "",
+      romaji: card.romaji || "",
       isBack: true
     });
 
@@ -512,7 +544,7 @@ document.addEventListener("DOMContentLoaded", () => {
   nextBtn.addEventListener("click", nextCard);
   shuffleBtn.addEventListener("click", shuffleCards);
 
-  // The practice button now starts the Bible quiz
+  // The practice button starts the Bible quiz
   practiceBtn.addEventListener("click", startBibleQuiz);
 
   closePraiseBtn.addEventListener("click", () => {
@@ -541,4 +573,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   loadFlashcards();
 });
-
